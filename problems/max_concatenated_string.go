@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 )
 
 /*
@@ -38,10 +37,3 @@ func find_big_unique_words(arr []string) int{
 	return len(preserve_string)
 }
 
-
-func main(){
-	arr := []string{"", "ab", "cd", "abcd", "cdab"}
-	//length:= max_concatenated_string(arr)
-	//fmt.Println(length)
-	fmt.Println(find_big_unique_words(arr))
-}
