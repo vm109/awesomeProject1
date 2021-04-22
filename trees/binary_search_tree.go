@@ -50,8 +50,8 @@ func traverse_a_bst(root *Node){
 	}
 }
 
-func  main()  {
-	arr:= []int{6,9,3,5,1,7,8,10}
-
-	traverse_a_bst(createBST(arr))
-}
+//func  main()  {
+//	arr:= []int{6,9,3,5,1,7,8,10}
+//
+//	traverse_a_bst(createBST(arr))
+//}

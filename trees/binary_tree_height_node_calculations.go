@@ -18,9 +18,9 @@ type Tree  tree.Tree
 func (t *Tree) calculate_tree_nodes() int{
  return int(math.Pow(2, float64(t.Height +1)))-1
 }
-//
+
 //func main()  {
-//	t := &Tree{ Height: 3}
+//	t := &Tree{ Height: 0}
 //	nodes := t.calculate_tree_nodes()
 //	fmt.Println(nodes)
 //}
