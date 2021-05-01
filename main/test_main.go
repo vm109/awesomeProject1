@@ -1,7 +1,7 @@
 package main
 
 import (
-	amzn_questions "awesomeProject1/amazon"
+	google_questions "awesomeProject1/google"
 	"fmt"
 )
 /*
@@ -46,10 +46,26 @@ string = abc
 Function for finding total number of steps
  */
 
-func main()  {
-	total_ways := amzn_questions.Travel_across_steps(5)
-	fmt.Println(total_ways)
+//func main()  {
+//	total_ways := amzn_questions.Travel_across_steps(5)
+//	fmt.Println(total_ways)
+//
+//	total_ways = amzn_questions.Num_Ways_Steps_Arr_Give(6, []int{1,3,5})
+//	fmt.Println(total_ways)
+//}
 
-	total_ways = amzn_questions.Num_Ways_Steps_Arr_Give(6, []int{1,3,5})
-	fmt.Println(total_ways)
+/*
+total set bits in given numbers
+ */
+//func main()  {
+//	amzn_questions.Find_the_total_bits_for_given_number_of_numbers(3)
+//}
+
+/*
+Tetsting google question to find the pair of numbers which equal the sum given in a
+collection of numbers
+ */
+func main(){
+	pair := google_questions.Finding_Pair_Of_Numbers_Linearly_With_Unsorted_Array([]int16{1,9,8,7,3,10, 11,16,17}, 23)
+	fmt.Println(pair)
 }
