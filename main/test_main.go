@@ -1,9 +1,5 @@
 package main
 
-import (
-	google_questions "awesomeProject1/google"
-	"fmt"
-)
 /*
 this is a local file to run other functions in other packages
  */
@@ -65,7 +61,7 @@ total set bits in given numbers
 Tetsting google question to find the pair of numbers which equal the sum given in a
 collection of numbers
  */
-func main(){
-	pair := google_questions.Finding_Pair_Of_Numbers_Linearly_With_Unsorted_Array([]int16{1,9,8,7,3,10, 11,16,17}, 23)
-	fmt.Println(pair)
-}
+//func main(){
+//	pair := google_questions.Finding_Pair_Of_Numbers_Linearly_With_Unsorted_Array([]int16{1,9,8,7,3,10, 11,16,17}, 23)
+//	fmt.Println(pair)
+//}
