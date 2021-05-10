@@ -26,8 +26,14 @@ import (
 //	}
 //}
 
-func main(){
-	arr := []int{1,2,3,4,5,6,7,8,9,10}
-	index := algos.Jump_search(arr, 1)
+//func main(){
+//	arr := []int{1,2,3,4,5,6,7,8,9,10}
+//	index := algos.Jump_search(arr, 1)
+//	fmt.Println(index)
+//}
+
+func  main()  {
+	arr:= []int{3,9,81,6561,43046721}
+	index := algos.Interpolation_search(arr, 43046721, 0, len(arr)-1)
 	fmt.Println(index)
 }
