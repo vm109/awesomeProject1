@@ -1,10 +1,5 @@
 package main
 
-import (
-	"awesomeProject1/algos"
-	"fmt"
-)
-
 //func main(){
 //	arr := []int{2,7,8,9,19,10}
 //
@@ -32,8 +27,8 @@ import (
 //	fmt.Println(index)
 //}
 
-func  main()  {
-	arr:= []int{3,9,81,6561,43046721}
-	index := algos.Interpolation_search(arr, 43046721, 0, len(arr)-1)
-	fmt.Println(index)
-}
+//func  main()  {
+//	arr:= []int{3,9,81,6561,43046721}
+//	index := search.Interpolation_search(arr, 43046721, 0, len(arr)-1)
+//	fmt.Println(index)
+//}

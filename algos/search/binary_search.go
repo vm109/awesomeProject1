@@ -1,4 +1,4 @@
-package algos
+package search
 
 /*
 Binary search is for searching an array by recursively

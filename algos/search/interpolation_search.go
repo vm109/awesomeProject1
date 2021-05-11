@@ -1,4 +1,4 @@
-package algos
+package search
 /*
 Interpolation search:
 In a sorted array, the time complexity is O(logN)
