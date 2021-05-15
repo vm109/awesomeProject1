@@ -1,7 +1,6 @@
 package tree_traversals
 
-import "fmt"
-
+import "awesomeProject1/trees/tree_structs"
 /*
 Given a Preorder array
 construct the BST
@@ -15,35 +14,29 @@ Preorder - root, left, right
 root - 10, left - 5, left -1, 7 - right of 5
  */
 
-type Node struct {
-	value int
-	left *Node
-	right *Node
-}
-
-func construct(root *Node, value int){
-	if(value < root.value ){
-		if( root.left != nil){
-			construct(root.left, value)
+func construct(root *tree_structs.Node, value int){
+	if(value < root.Value ){
+		if( root.Left != nil){
+			construct(root.Left, value)
 		}else{
-			root.left = &Node{ value: value}
+			root.Left = &tree_structs.Node{ Value: value}
 		}
-	}else if (value > root.value){
-		if( root.right != nil){
-			construct(root.right, value)
+	}else if (value > root.Value){
+		if( root.Right != nil){
+			construct(root.Right, value)
 		}else{
-			root.right = &Node{value: value}
+			root.Right = &tree_structs.Node{Value: value}
 		}
 	}
 }
 
-func Constructing_bst(inoder_arr []int){
-	root := &Node{
-		value : inoder_arr[0],
+func Constructing_bst(inoder_arr []int) *tree_structs.Node{
+	root := &tree_structs.Node{
+		Value : inoder_arr[0],
 	}
 	for _,value := range inoder_arr[1:]{
 		construct(root, value)
 	}
 
-	fmt.Println("printing the tree", *root)
+	return root
 }

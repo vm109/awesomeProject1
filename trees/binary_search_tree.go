@@ -9,44 +9,39 @@ Right Subtree will have nodes always greater than parent
 package main
 
 import "fmt"
+import treestruct "awesomeProject1/trees/tree_structs"
 
-type Node struct {
-	value int
-	left *Node
-	right *Node
-}
-
-func traverse_to_next_node(node *Node, value int)  {
-	if(node.value < value) {
-		if (node.right != nil) {
-			traverse_to_next_node(node.right, value)
+func traverse_to_next_node(node *treestruct.Node, value int)  {
+	if(node.Value < value) {
+		if (node.Right != nil) {
+			traverse_to_next_node(node.Right, value)
 		} else {
-			node.right = &Node{value: value}
+			node.Right = &treestruct.Node{Value: value}
 		}
-	} else if(node.value > value){
-		if(node.left != nil) {
-			traverse_to_next_node(node.left, value)
+	} else if(node.Value > value){
+		if(node.Left != nil) {
+			traverse_to_next_node(node.Left, value)
 		}else{
-			node.left = &Node{ value: value}
+			node.Left = &treestruct.Node{ Value: value}
 		}
 	}
 }
 
-func createBST(arr []int) *Node{
-	root := &Node{ value: arr[0]}
+func createBST(arr []int) *treestruct.Node{
+	root := &treestruct.Node{ Value: arr[0]}
 	for _,val := range arr[1:] {
 		traverse_to_next_node(root, val)
 	}
 	return root
 }
 
-func traverse_a_bst(root *Node){
-	fmt.Println(root.value)
-	if(root.left != nil){
-		traverse_a_bst( root.left)
+func traverse_a_bst(root *treestruct.Node){
+	fmt.Println(root.Value)
+	if(root.Left != nil){
+		traverse_a_bst( root.Left)
 	}
-	if(root.right != nil){
-		traverse_a_bst(root.right)
+	if(root.Right != nil){
+		traverse_a_bst(root.Right)
 	}
 }
 
