@@ -89,21 +89,21 @@ func traverse_tree_inorder(tree *Node){
 	}
 }
 
-func main(){
-	root := Node{
-		value: 1,
-	}
-	root.right = &Node{
-		value: 5,
-	}
-	traverse_tree_inorder(&root)
-	fmt.Println("--------------------")
-	insert_node_bst(&root, 3)
-	insert_node_bst(&root, 6)
-	insert_node_bst(&root, 4)
-	insert_node_bst(&root, 2)
-	traverse_tree_inorder(&root)
-	find_the_inorder_predeccessor(&root, 5, nil)
-	fmt.Println("---------------------")
-	traverse_tree_inorder(&root)
-}
+//func main(){
+//	root := Node{
+//		value: 1,
+//	}
+//	root.right = &Node{
+//		value: 5,
+//	}
+//	traverse_tree_inorder(&root)
+//	fmt.Println("--------------------")
+//	insert_node_bst(&root, 3)
+//	insert_node_bst(&root, 6)
+//	insert_node_bst(&root, 4)
+//	insert_node_bst(&root, 2)
+//	traverse_tree_inorder(&root)
+//	find_the_inorder_predeccessor(&root, 5, nil)
+//	fmt.Println("---------------------")
+//	traverse_tree_inorder(&root)
+//}
