@@ -2,21 +2,22 @@ package main
 
 import (
 	"awesomeProject1/my_utils"
+	"awesomeProject1/trees/tree_structs"
 	"fmt"
 )
 func Construct_tree(arr []int){
 	queue := my_utils.Queue{
 		make([]interface{},0),
 	}
-	root := &Node{arr[0], nil, nil}
+	root := &tree_structs.Node{arr[0], nil, nil}
 	queue.Enqueue(root)
 	i:= 1
 	for i+1 < len(arr) {
-		pointer := (queue.Dequeue()).(*Node)
-		left := &Node{arr[i], nil, nil}
-		right := &Node{arr[i+1], nil, nil}
-		pointer.left = left
-		pointer.right = right
+		pointer := (queue.Dequeue()).(*tree_structs.Node)
+		left := &tree_structs.Node{arr[i], nil, nil}
+		right := &tree_structs.Node{arr[i+1], nil, nil}
+		pointer.Left = left
+		pointer.Right = right
 		queue.Enqueue(left)
 		queue.Enqueue(right)
 		i = i+2
