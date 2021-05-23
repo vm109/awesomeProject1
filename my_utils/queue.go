@@ -13,3 +13,7 @@ func(q *Queue) Dequeue() interface{}{
 	q.Queue = q.Queue[1:]
 	return value
 }
+
+func (q *Queue) Peek() interface{}{
+	return  q.Queue[0]
+}
