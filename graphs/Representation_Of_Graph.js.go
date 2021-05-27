@@ -5,10 +5,6 @@ import (
 	"strconv"
 )
 
-type Graph_Node struct {
-	value int
-	next *Graph_Node
-}
 func Add_edge(adjacency_list map[int][]int, u,v int) map[int][]int{
 	if(adjacency_list[u] == nil){
 		adjacency_list[u] = append(adjacency_list[u], u)
