@@ -4,6 +4,7 @@ import "fmt"
 
 type GraphNode struct{
 	Data int
+	Visited bool
 }
 
 type GraphEdge struct{
