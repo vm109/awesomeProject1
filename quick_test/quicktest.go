@@ -1,5 +1,6 @@
 package main
 
+import "fmt"
 
 func jumpingOnClouds(c []int32) int32 {
 	canbewoninstep := 0
@@ -11,10 +12,10 @@ func jumpingOnClouds(c []int32) int32 {
 				canbewoninstep = 0
 				break
 			}
-			if( c[i+1] == 0 ) {
+			if( c[i+2] == 0 ) {
 				canbewoninstep = canbewoninstep + 1
 				i = i + 2
-			}else if ( c[i] == 0){
+			}else if ( c[i+1] == 0){
 				canbewoninstep = canbewoninstep + 1
 				i = i + 1
 			}else{
@@ -27,5 +28,6 @@ func jumpingOnClouds(c []int32) int32 {
 }
 
 func main(){
-
+ x := jumpingOnClouds([]int32{0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0,1,0})
+ fmt.Println(x)
 }

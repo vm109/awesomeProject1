@@ -1,4 +1,4 @@
-package graphs
+package traversals
 
 func dfs_visitor (graph map[int][]int, adjacent_verticies []int, visited_nodes map[int]bool) map[int]bool{
 	for _, vertex := range adjacent_verticies {
