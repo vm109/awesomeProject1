@@ -6,6 +6,9 @@ type GraphEdge struct {
 	Weight int
 }
 
+/*
+IndexGraphEdge is the one which has Start And End Values as integer values.
+ */
 type IndexGraphEdge struct {
 	Start int32
 	End int32
