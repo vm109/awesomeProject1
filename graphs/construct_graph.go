@@ -4,13 +4,13 @@ import "fmt"
 
 type GraphNode struct{
 	Data int
-	Visited bool
 }
 
 type GraphEdge struct{
 	StartNode int
 	EndNode int
 }
+
 
 func Print_Graphs() {
 	adjacency_matrix := [][]int{[]int{0, 1, 0}, []int{1, 0, 1}, []int{0, 0, 1}}
