@@ -10,6 +10,10 @@ type Tree struct {
 	Right *Tree
 }
 
+type ArrayOfIntegerArrays struct {
+	ArrOfArr [][]int
+}
+
 func (a ArrayOfIntegers) Contains(integer int) bool {
 	contains := false
 	for val := range a.Arr{
