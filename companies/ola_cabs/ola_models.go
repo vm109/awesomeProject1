@@ -1,6 +1,9 @@
 package ola_cabs
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type ArrayOfIntegers struct {
 	Arr []int
@@ -89,6 +92,9 @@ func (t *Tree) CompareTwoTreeToEqual(comparsion_tree *Tree) bool {
 	return both_equal && left_tree_equal && right_tree_equal
 }
 
+func FindHeightByNodes(nodes int) float64{
+	return math.Log2(float64(nodes))
+}
 
 func (q *Queue) IsEmpty() bool{
 	return len(q.Arr) < 1
