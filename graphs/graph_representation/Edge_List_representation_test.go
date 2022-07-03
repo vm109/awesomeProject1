@@ -1,8 +1,8 @@
 package graph_representation
 
 import (
-	"awesomeProject1/my_utils"
 	"fmt"
+	"github.com/myawesomeproject1/my_utils"
 	"testing"
 )
 
@@ -21,7 +21,6 @@ func TestPrintEdgesAndTheWeight(t *testing.T) {
 	PrintEdgesAndTheWeight(edge_list)
 }
 
-
 func TestGetVerticesFromEdgeList(t *testing.T) {
 	edge_list := []*my_utils.GraphEdge{}
 	edge_list = append(edge_list, &my_utils.GraphEdge{Start: "A", End: "B", Weight: 5})
@@ -35,7 +34,7 @@ func TestGetVerticesFromEdgeList(t *testing.T) {
 	edge_list = append(edge_list, &my_utils.GraphEdge{Start: "F", End: "H", Weight: 4})
 	edge_list = append(edge_list, &my_utils.GraphEdge{Start: "G", End: "H", Weight: 6})
 	vertices := GetVerticesFromEdgeList(edge_list)
-	for key, _ := range vertices{
+	for key, _ := range vertices {
 		fmt.Println(key)
 	}
 }
