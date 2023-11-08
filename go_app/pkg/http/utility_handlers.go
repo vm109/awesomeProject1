@@ -1,13 +1,15 @@
-package handlers
+package http
 
 import (
-	"encoding/json"
-	"go_app/m/v2/pkg/http"
 	"net/http"
 )
 
 func (a *Api) statushandler(w http.ResponseWriter, r *http.Request) {
-	body, _ := json.Marshal("hello")
+	type statusMessage struct {
+		AppName string
+		Status  string
+	}
+	body := statusMessage{AppName: "TaskManager", Status: "Live"}
 
 	a.WriteJsonBodyResponse(r, w, body, http.StatusOK)
 }
